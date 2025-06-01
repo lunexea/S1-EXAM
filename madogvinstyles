@@ -1,0 +1,190 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*---cta knapperne, lavet i et gridt system---*/
+
+.CTA {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 100px;
+    max-height: 170px;
+    justify-self: center;
+
+    padding: 2%;
+}
+
+.CTA h2{
+    display:flex;
+    max-width: 95px;
+    height: auto;
+    padding: 25px 100px;
+    background-color: #FFAC50;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.CTA a{
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+
+.CTA1 h2{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.infobox{
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    width: 890px;
+    flex-direction: row;
+    place-self: center;
+    justify-content: space-between;
+
+}
+
+.infobox h1{
+   
+    display: flex;
+    max-width: 550px;
+    height: auto;
+    text-align: end;
+    color: #fff6ef;
+    margin-top: -1%;
+
+}
+
+.infobox img{
+    display: flex;
+    max-width: 400px;
+    height: auto;
+
+}
+
+.infobox1{ 
+    
+    display: flex;
+    height: auto;
+    width: 890px;
+    flex-direction: row;
+    place-self: center;
+    justify-content: space-between;
+    padding: 15%;
+
+
+}
+.infobox1 h1{
+    display: flex;
+    max-width: 450px;
+    height: auto;
+    text-align: start;
+    color: #fff6ef;
+    margin-top: -1%;
+}
+
+.infobox1 img{
+    display: flex;
+    max-width: 400px;
+    height: auto;
+
+}
+
+.button{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFAC50;
+    align-self: center;
+    margin-top: 30%;
+    margin-right: -115%;
+    border: solid 15px #FFAC50;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.button1{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFAC50;
+    align-self: center;
+    margin-top: 30%;
+    margin-left: -105%;
+    border: solid 15px #FFAC50;
+    border-radius: 15px;
+}
+
+.infobox p:hover{
+    transform: scale(1.2);
+} 
+
+
+
+@media screen and (max-width: 768px) {
+
+    .CTA{
+        
+        column-gap: 10px;
+        justify-self: center;
+        height: 150px;
+    }
+    .CTA h2{
+        display:flex;
+        width: 100px;
+      
+        padding: 5px 10px;
+        background-color: #FFAC50;
+        border-radius: 15px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .scroll{
+        box-sizing: border-box;
+        display: flex;
+        transform: scale(1.0);
+        max-width: 390px;
+        align-content: center;
+    }
+
+    .infobox{
+        box-sizing: border-box;
+        width: 290px;
+        height: 100px;
+    }
+
+    .infobox1{
+        
+        width: 290px;
+        height: 100px;
+
+    }
+
+    .infobox h1{
+        width: 180px;
+        height: auto;
+        
+    }
+
+    .infobox1 h1{
+        width: 180px;
+        height: auto;
+    }
+    
+    .button{
+        transform: scale(0.4);
+    }
+
+    .button1{
+        transform: scale(0.4);
+    }
+}

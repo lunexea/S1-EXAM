@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Havblink</title>
+        <link rel="stylesheet" href="vingaardstyle.css">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="header+footerstyle.css">
+    </head>
+    <body>
+        <div class="scroll-top"> <!--scroll back to top knap, linket til id main, og placeret i bunden-->
+            <a class="scroll-top__link" href="#main"><img src="asset/TOTOPMAIN1.svg" alt="totop"></a> <!--href="#" navigates to the top of the page-->
+        </div> 
+        <header class="main-header">
+          
+            
+        </header>
+           <div>
+                <ul class="top-nav">
+                    <li><a class="navbar"><img src="asset/MENU1.svg" alt="nav"></a>
+                        <div class="navbar-ctn">
+                        <a href="index.html">Havblink</a>
+                        <a href="madogvin.html">Mad og vin</a>
+                        <a href="vingaard.html">Vingaarden</a>
+                        <a href="events.html">Events</a>
+                        <a href="">Shop</a>
+                      </div>
+                    </li>
+                      
+                    <li><a id="logo" href="index.html"><img src="asset/logo.svg" alt="logo"></a></li>
+                </ul>
+
+
+            </div>
+
+        <main id="main">
+            
+            <div class="vineri">
+                <h1 class="start">VORES VINERI</h1>
+                <img src="picture/b5.png" alt="billede1">
+
+                <p>Velkommen til Havblink,  vores lille vinhjerte i det nordlige Danmark.</p>
+                <br>
+                <p>Vi startede vingården i midten af 2017 med en drøm om at skabe noget ægte, bæredygtigt og dansk.</p>
+                <br>
+                <p>Vin har altid været noget særligt for os, og vi ønskede at bidrage med et produkt, der både tager hensyn til naturen og emmer af håndværk.</p>  
+                <br>
+                <p>Alt hos os er lavet i hånden, fra vinstokken til flasken, fordi vi mener, at man kan smage forskellen, når der er lagt kærlighed og personlighed i hver eneste dråbe.</p>
+                <br>
+                <p>Vores vin skal være en del af danskernes hygge, den lune sommeraften på terrassen eller det lille lysglimt af sol midt i vintermørket.</p>
+                <br>
+                <p>Hos os er vin ikke bare en drink, det er en følelse, og den vil vi gerne dele med jer.</p>
+                <br>
+            </div>
+            
+            <div class="bg">
+                <br>
+                <h1 class="overskrift">HAVBLINK FAMILIEN</h1>
+            
+
+                <div class="familien">
+                    <P>Vi er en lille gruppe venner med en stor kærlighed til naturen, håndværket og de øjeblikke, man deler med dem, man holder af. </P>
+                    <br>
+                    <p>Vores rejse begyndte med nysgerrigheden på, om man virkelig kunne lave god vin i Danmark, og med hver vores baggrund, én med hænderne dybt forankret i landbruget og én med et kreativt blik for detaljen, kastede vi os ud i det. </p>
+                    <br>
+                    <p>Det blev hurtigt klart for os, at vin kunne noget helt særligt, også her i det nordjyske. </p>
+                    <br>
+                    <p>Vi har altid båret på minderne fra vores rejser rundt i verden, og drømmen var at skabe noget, der kunne bringe den samme varme og glæde videre. </p>
+                    <br>
+                    <p>For os handler vin ikke bare om smag, det handler om at være sammen, skabe nye minder og nyde de stille stunder i godt selskab.</p>
+                    <br>
+                    <img src="picture/familien.png" alt="billede2">
+                    <br>
+                    <br>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="footerbox">
+
+                <div class="address">
+                    <h2>Adresse</h2>
+                    <p>Havblikvej nr 90</p>
+                    <p>9500 Havby</p>
+
+                </div>
+                <div class="dates">
+                    <h2>Aabningstider</h2>
+                    <ul>
+                        <li>Mandag          10-18</li>
+                        <li>Tirsdag         10-18</li>
+                        <li>Onsdag          10-18</li>
+                        <li>Torsdag         10-19</li>
+                        <li>Fredag          10-20</li>
+                        <li>Lørdag          10-20</li>
+                        <li>Søndag          10-20</li>
+                    </ul>
+
+                </div>
+                <div class="contact">
+                    <h2>Kontakt</h2>
+                    <p>Havblik@hotmail.com</p>
+                    <p>+45 76 73 04 96</p>
+                    <p>CVR nr:70042</p>
+                    <img id="insta" src="asset/insta.svg" alt="instagram">
+                    <img src="asset/facebook.svg" alt="facebook">
+
+                </div>
+            </div>
+        </footer>
+        
+    <script>
+        document.querySelector('.navbar').addEventListener('mouseover', function() {
+    document.querySelector('.navbar-ctn').classList.add('visible');
+});
+
+document.addEventListener('click', function(event) {
+    let navbarCtn = document.querySelector('.navbar-ctn');
+    let navbar = document.querySelector('.navbar');
+
+    if (!navbar.contains(event.target) && !navbarCtn.contains(event.target)) {
+        navbarCtn.classList.remove('visible');
+    }
+});
+
+    </script>
+    </body>
+</html>

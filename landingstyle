@@ -1,0 +1,88 @@
+.scroll{
+    box-sizing: border-box;
+    display: flex;
+    background-color: #fff6e9; ;
+    overflow: auto;
+
+}
+.scroll a{
+    display: inline-block;
+    color: #e38319;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.scroll a:hover{
+    background-color: #ffac50;
+}
+
+#picture{
+    display: flex;
+    width: 100%;
+    height: auto;
+    column-gap: 3%;
+}
+
+.infosection{
+    box-sizing: border-box;
+    display: flex;
+    justify-items: center;
+    place-self: center; /*--- place self, istedet for item da det sætter fokus på selve elementet og trækker den hen i midten---*/
+    height: auto;
+    width: 890px;
+    flex-direction: column;
+}
+.infosection img{
+    display: flex;
+    justify-self: center;
+}
+.infosection p{
+    display: flex;
+    justify-content: start;
+    color: rgb(255, 255, 255);
+}
+
+.main {
+    position: relative;
+    
+}
+
+.scroll-top {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    justify-items: right;
+}
+.scroll-top__link {
+    scroll-behavior: smooth;
+    position: -webkit-sticky;
+}
+/*----------------responsiv-----------------*/
+
+@media screen and (max-width: 768px) {
+
+
+
+   .scroll{
+        box-sizing: border-box;
+        display: flex;
+        transform: scale(1.0);
+        align-content: center;
+   }
+
+    #picture{
+        display: flex;
+        transform: scale(0.6);
+
+        margin-left: -80px;
+        margin-bottom: -80px;
+        margin-top: -70px;
+        padding-right: -10px;
+    }
+
+   .infosection{
+        width: 290px;
+        
+   }
+
+}

@@ -1,0 +1,45 @@
+.vineri{
+    display: flex;
+    justify-items: center;
+    place-self: center; /*--- place self, istedet for item da det sætter fokus på selve elementet og trækker den hen i midten---*/
+    height: auto;
+    width: 890px;
+    flex-direction: column;
+}
+.vineri img{
+    display: flex;
+    justify-self: center;
+}
+.vineri p{
+    display: flex;
+    justify-content: start;
+}
+
+.familien{
+    display: flex;
+    justify-items: center;
+    place-self: center; /*--- place self, istedet for item da det sætter fokus på selve elementet og trækker den hen i midten---*/
+    height: auto;
+    width: 890px;
+    flex-direction: column;
+}
+.familien img{
+    display: flex;
+    justify-self: center;
+}
+.familien p{
+    display: flex;
+    justify-content: start;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px) {
+
+    .familien{
+        width: 290px;
+    }
+
+    .vineri{
+        width: 290px;
+    }
+}

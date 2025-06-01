@@ -1,0 +1,61 @@
+.intro{
+    display: flex;
+    justify-items: center;
+    place-self: center; /*--- place self, istedet for item da det sætter fokus på selve elementet og trækker den hen i midten---*/
+    height: auto;
+    width: 890px;
+    flex-direction: column;
+}
+.intro img{
+    display: flex;
+    justify-self: center;
+}
+.intro p{
+    display: flex;
+    justify-content: start;
+}
+
+.opskrift{
+    display: flex;
+    justify-items: center;
+    place-self: center; /*--- place self, istedet for item da det sætter fokus på selve elementet og trækker den hen i midten---*/
+    height: auto;
+    width: 890px;
+    flex-direction: column;
+    padding-bottom: 2%;
+}
+
+.opskrift p{
+    display: flex;
+    justify-content: start;
+    color: rgb(255, 255, 255);
+    place-self: center;
+}
+
+.opskrift h2, h1{
+    color: rgb(255, 255, 255);
+}
+
+#picture{
+    height: 50%;
+    width: 50%;
+    place-self: center;
+    padding-bottom: 5%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .opskrift{
+        width: 290px;
+    }
+
+    .intro{
+        width: 290px;
+    }
+
+    #picture{
+        height: 50%;
+        width: 50%;
+    }
+}

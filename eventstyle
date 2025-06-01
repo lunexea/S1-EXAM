@@ -1,0 +1,78 @@
+.event{
+    display: flex;
+    justify-items: center;
+    place-self: center; /*--- place self, istedet for item da det sætter fokus på selve elementet og trækker den hen i midten---*/
+    height: auto;
+    width: 890px;
+    flex-direction: column;
+}
+.event img{
+    display: flex;
+    justify-self: center;
+}
+.event p{
+    display: flex;
+    justify-content: start;
+}
+
+.bestilling{
+    transform: scale(0.6); /*brug af scale, da den er den rigtige bredte og længe, men skal være mindre*/
+    max-width: 40vh;
+    border-radius: 3vh 3vh 0 0;
+}
+
+.priser {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: auto auto;
+
+    column-gap: 100px;
+    max-height: 170px;
+    justify-self: center;
+
+    padding: 2%;
+}
+.pris{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+section{
+    display:flex;
+    max-width: 95px;
+    height: auto;
+    padding: 25px 100px;
+    background-color: #fff6ef;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.betaling{
+    display: block;
+    padding-top: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    max-width: 274px;
+    height: auto;
+    background-color: #ffac50;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .event{
+        width: 290px;
+        justify-content: center;
+    }
+
+    .priser{
+        width: 290px;
+        transform: scale(0.5);
+        justify-content: center;
+    }
+
+
+}

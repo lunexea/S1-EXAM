@@ -16,25 +16,16 @@
         <header class="main-header">
         
         </header>
-            <div>
-                <ul class="top-nav">
-                    <li><a class="navbar"><img src="asset/MENU1.svg" alt="nav"></a>
-                        <div class="navbar-ctn">
-                        <a href="index.html">Havblink</a>
-                        <a href="madogvin.html">Mad og vin</a>
-                        <a href="vingaard.html">Vingaarden</a>
-                        <a href="events.html">Events</a>
-                        <a href="">Shop</a>
-                      </div>
-                    </li>
-                      
-                    <li><a id="logo" href="index.html"><img src="asset/logo.svg" alt="logo"></a></li>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Havblink</a></li>
+                    <li><a href="madogvin.html">Mad og vin</a></li>
+                    <li><a href="vingaard.html">Vingaarden</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="">Shop</a></li>
                 </ul>
-
-
-            </div>
-
-        <main id="main"><!---id main, så scroll ved hvor den skal hen-->
+            </nav>
+        <main id="main">
             <div class="event">
                 <h1 class="start">skal du være med til vinsmagining på havblink gaard?</h1>
                 <img src="picture/15.png" alt="vinsmagning">
@@ -62,7 +53,6 @@
                         <p class="betaling">199kr<br>pr person</p>
 
                     </section>
-
                     <section class="pris">
                         <img class="bestilling" src="picture/pris.png" alt="bestilling">
                         <h3>Præmium</h3>
@@ -73,60 +63,12 @@
 
                         <p class="betaling">199kr<br>pr person</p>
                     </section>
-
                 </div>
             </div>
 
         </main>
 
-        <footer>
-            <div class="footerbox">
-
-                <div class="address">
-                    <h2>Adresse</h2>
-                    <p>Havblikvej nr 90</p>
-                    <p>9500 Havby</p>
-
-                </div>
-                <div class="dates">
-                    <h2>Aabningstider</h2>
-                    <ul>
-                        <li>Mandag          10-18</li>
-                        <li>Tirsdag         10-18</li>
-                        <li>Onsdag          10-18</li>
-                        <li>Torsdag         10-19</li>
-                        <li>Fredag          10-20</li>
-                        <li>Lørdag          10-20</li>
-                        <li>Søndag          10-20</li>
-                    </ul>
-
-                </div>
-                <div class="contact">
-                    <h2>Kontakt</h2>
-                    <p>Havblik@hotmail.com</p>
-                    <p>+45 76 73 04 96</p>
-                    <p>CVR nr:70042</p>
-                    <img id="insta" src="asset/insta.svg" alt="instagram">
-                    <img src="asset/facebook.svg" alt="facebook">
-
-                </div>
-            </div>
+        <footer>  
         </footer>
-        
-    <script>
-        document.querySelector('.navbar').addEventListener('mouseover', function() {
-    document.querySelector('.navbar-ctn').classList.add('visible');
-});
-
-document.addEventListener('click', function(event) {
-    let navbarCtn = document.querySelector('.navbar-ctn');
-    let navbar = document.querySelector('.navbar');
-
-    if (!navbar.contains(event.target) && !navbarCtn.contains(event.target)) {
-        navbarCtn.classList.remove('visible');
-    }
-});
-
-    </script>
     </body>
 </html>

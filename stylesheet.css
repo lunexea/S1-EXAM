@@ -1,8 +1,5 @@
 @font-face {
-    font-family: "baneta";
-    font-family: "eden_meadow";
-    font-family: "reliesta";
-    font-family: "solwat";
+    font-family: baneta, eden_meadow, reliesta, solway;
     src: url(font/baneta/Baneta.ttf);
     src: url(font/eden_meadow/Eden\ Meadow\ DEMO.ttf);
     src: url(font/reliesta/Reliesta.otf);
@@ -10,9 +7,6 @@
     src: url(font/solway/fonts/Solway-Regular.ttf);
 }
 
-html{
-    scroll-behavior: smooth;/*for at gør min bevgelse til to top, smooth, istedetfor at den mere eller mindre teleportere derhen*/
-}
 
 .hero {
     display: flex;
@@ -31,7 +25,7 @@ p{
     line-height: 16px;
 }
 
-body{ /*kaldt på body for at give den faste regler, alle andre elementer skal reagere ud fra*/
+body{
     background-color: #fff6e9;
     margin: 0;
     padding: 0;
@@ -58,6 +52,11 @@ h2{
     line-height: 42px;
 }
 
+.sticky{
+    max-width: 100%;
+    z-index: -1;
+}
+
 .overskrift{
     display: flex;
     padding-top: 30%;
@@ -67,47 +66,44 @@ h2{
     
 }
 
-.bg{
-    display: flow-root; /*brug af flow root for, mere eller mindre skabe n nu root, som skaber en block tontainer lægger dens indhold ud, ved brug af et flow layout*/
-    background-image: url(asset/BACKGROUND1.svg); /*implementerede billede i CSS istedetfor Html da det gav de færeste problemer, og ikke kom i vejen for det andet indhold, det gav mulighed for at undgå hirakiet i html delen*/
+picture{
+    background-image: url(asset/BACKGROUND1.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    min-height: 60vh;
+    justify-content: center;
+    width: 100%px;
+    height: auto;
     z-index: -4;
-    
 }
 
 .start{
     height: auto;
     padding:2%;
-    text-align: center;
-    max-width: 100vh;
-    justify-self: center;
-    color: black;
 
 }
 
 .scroll-top{
     display: flex;
-    position:fixed;/*fixed for at den fast forbliver i hjørnet*/
+    position:fixed;
     justify-content: right;
-    z-index: 5; /*z indeks for at få den frem på y aksen, så den ikke forsvinder under andre elementer*/
+    z-index: 5;
     bottom: 10px;
     right: 10px;
 
 }
 
-/*-----------------responsiv----------------*/
+
 @media screen and (max-width: 768px) {
 
     .overskrift{
         display: flex;
         padding-top: 20%;
+        
+
     }
     
     body{
-        display: inline-block;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -136,17 +132,17 @@ h2{
         font-weight: 400;
         font-size: 10px;
         line-height: 10px;
-        justify-self: center;
+        justify-content: center;
         max-width: 290px;
 
     }
 
     .start{
-        padding-top: 15%; /*ekstra padding i responsiv, da den ellers sidder for tæt på hero*/
+        padding-top: 10%;
     }
 
-    .bg{   
+    .bg{
+        
         margin-top: 5%;
-        display: block;
     }
 }

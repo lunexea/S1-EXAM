@@ -13,32 +13,51 @@
         <div class="scroll-top"> <!--scroll back to top knap, linket til id main, og placeret i bunden-->
             <a class="scroll-top__link" href="#main"><img src="asset/TOTOPMAIN1.svg" alt="totop"></a> <!--href="#" navigates to the top of the page-->
         </div> 
-        <header class="main-header">
+        <header id="main" class="main-header">
+
+            
 
 
 
 
         </header>
+        <div>
+                <ul class="top-nav">
+                    <li><a class="navbar"><img src="asset/MENU1.svg" alt="nav"></a>
+                        <div class="navbar-ctn">
+                        <a href="index.html">Havblink</a>
+                        <a href="madogvin.html">Mad og vin</a>
+                        <a href="vingaard.html">Vingaarden</a>
+                        <a href="events.html">Events</a>
+                        <a href="">Shop</a>
+                      </div>
+                    </li>
+                      
+                    <li><a id="logo" href="index.html"><img src="asset/logo.svg" alt="logo"></a></li>
+                </ul>
+
+
+            </div>
 
         <main>
         
             <p class="start">mangler du gode ideer til en lækker aften med god mad sammen med vennerne?  så kig på vores dejlige opskrifter med vin og covktail pairing, samt gode ideer til havd der kan laves på aften</p>
 
-            <div class="CTA">
-                <h2>HVIDVIN</h2>
-                <h2>MOUSERENDE VIN</h2>
-                <h2>DESERT VIN</h2>
-                <h2>COCKTAILS</h2>
+            <div class="CTA"> <!---CTA box, for at lave grid boxes til indholdet-->
+               <a class="CTA1" href="#Hvidvin"><h2>HVIDVIN</h2></a> <!---cta1 for diferencere på størelsen, da padding ellers ville gøre nogle små, og npgle store-->
+                <a href=""><h2>MOUSERENDE VIN</h2></a>
+                <a href=""><h2>DESERT VIN</h2></a>
+                <a class="CTA1" href=""><h2>COCKTAILS</h2></a>
             </div>
 
-            <div class="bg">
+            <div class="bg"> <!---class bg, for bagrund-->
                 <br>
                 <h1 class="overskrift">HVID</h1>
-                
+
         
-                <div class="infobox">
-                    <img src="picture/12.png" alt="hvidvin">
-                    <p class="button">Læs mere her...</p>
+                <div id="Hvidvin" class="infobox">
+                    <img  src="picture/12.png" alt="hvidvin">
+                    <a href="opskrift.html" class="button"><p>Læs mere her...</p></a>
                     <h1>Havtorns infused hvidvin med hvid fiks</h1>
                     
                 </div>   
@@ -46,24 +65,70 @@
                 <div class="infobox1">
                     <h1>Lækker hvid med tappas</h1>
                     <p class="button1">Læs mere her...</p>
-                    <img src="picture/12.png" alt="hvidvin">
+                    <img src="picture/13.png" alt="hvidvin">
                     
                 </div>    
                 
                 <div class="infobox">
-                    <img src="picture/12.png" alt="hvidvin">
+                    <img src="picture/14.png" alt="hvidvin">
                     <p class="button">Læs mere her...</p>
                     <h1>kremet pasta med hvidvin</h1>
                     
                 </div>
-                <div class="overskrift">
+                <div id="overskrift">
                     <h1 >MOUSERENDE</h1>
                 </div>
             </div>
         </main>
 
-        <footer>
-            
+         <footer>
+            <div class="footerbox">
+
+                <div class="address">
+                    <h2>Adresse</h2>
+                    <p>Havblikvej nr 90</p>
+                    <p>9500 Havby</p>
+
+                </div>
+                <div class="dates">
+                    <h2>Aabningstider</h2>
+                    <ul>
+                        <li>Mandag          10-18</li>
+                        <li>Tirsdag         10-18</li>
+                        <li>Onsdag          10-18</li>
+                        <li>Torsdag         10-19</li>
+                        <li>Fredag          10-20</li>
+                        <li>Lørdag          10-20</li>
+                        <li>Søndag          10-20</li>
+                    </ul>
+
+                </div>
+                <div class="contact">
+                    <h2>Kontakt</h2>
+                    <p>Havblik@hotmail.com</p>
+                    <p>+45 76 73 04 96</p>
+                    <p>CVR nr:70042</p>
+                    <img id="insta" src="asset/insta.svg" alt="instagram">
+                    <img src="asset/facebook.svg" alt="facebook">
+
+                </div>
+            </div>
         </footer>
+        
+    <script>
+        document.querySelector('.navbar').addEventListener('mouseover', function() {
+    document.querySelector('.navbar-ctn').classList.add('visible');
+});
+
+document.addEventListener('click', function(event) {
+    let navbarCtn = document.querySelector('.navbar-ctn');
+    let navbar = document.querySelector('.navbar');
+
+    if (!navbar.contains(event.target) && !navbarCtn.contains(event.target)) {
+        navbarCtn.classList.remove('visible');
+    }
+});
+
+    </script>
     </body>
 </html>

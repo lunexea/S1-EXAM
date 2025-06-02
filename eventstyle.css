@@ -16,7 +16,7 @@
 }
 
 .bestilling{
-    transform: scale(0.6);
+    transform: scale(0.6); /*brug af scale, da den er den rigtige bredte og længe, men skal være mindre*/
     max-width: 40vh;
     border-radius: 3vh 3vh 0 0;
 }

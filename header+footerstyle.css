@@ -1,9 +1,9 @@
 .main-header {
   width: 100%;
-  height: 65vh;
+  height: 65vh; /*brug ah vh, Viewpoint height, for nemmere at scale den ned i responsiv*/
   background-image: url(picture/10.png);
   position: relative;
-  z-index: -1; /* Ensures the image stays in the background */
+  z-index: -1; /* sørger for at billedet forbliver i bagrunden, under header */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,58 +11,156 @@
 
 }
 
-.bgcolor{
-  background-color: #ffac50;
-}
 
-#navbar, #cart{
+.navbar{
   width: 100%;
   height: 5vh;
 
 }
 
 
-
-#navbar-ctn{
-  list-style-type: none;
-  margin: 0;
-  padding: 15px 0;
-  justify-self: center;
-  top: 30vh;
+.navbar-ctn{
+  display: none; /*display nane, for at indhold ikke vises, for burger menu clickes*/
   position: absolute;
-  left: 45vh;
-  background-color: bisque;
-  display: block;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: row;
+  padding-inline: 1vh;
+  font-size: 40px;
+  margin: 7vh 20vh;
 }
 
-#navbar-ctn li{
-  display: inline;
-  padding: 0 2vh;
-}
 
-#navbar-ctn a{
+.navbar-ctn a{
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  color: #000000;
-  font-family: Solway, serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 16px;
+  display: block;
+  text-align: left;
 }
 
-#top-nav{
-  list-style-type: none;
-  margin: 0;
+.top-nav{
+  list-style-type: none; /* list style type, none, for at fjerne prikkerne der naturligt forkommer ved brug af list*/
+  margin: 0; /*margin 0, er nødvendig for at stabilisere indholdet, da det ellers falder sammen*/
   justify-content: center;
-  top: 10vh;
+  top: 0vh;
   position: absolute;
   height: auto;
+  background-color: #ffac30;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 184.7vh;
+  padding: 5vh 0vh 7vh 6vh;
 }
 
-#top-nav li{
-  display: inline-block;
+.top-nav li{
+  display: inline-block; /*brug af inline block, for at gøre listen vertical*/
   padding: 0 19vh;
 }
 
-#top-nav a{
-  text-decoration: none;
+.top-nav a{
+  text-decoration: none; /*for at fjerne den typiske link stil, underline med blå teskt*/
+  color: black;
 }
+
+.navbar:hover + .navbar-ctn {
+  display: inline-flex; /*inline flex, gjorde st den 'åbnede' sig op, så den kunne rykkes på*/
+  left: 5vh;
+  margin: 4vh 0vh;
+  font-size: 12px;
+  padding-inline: 0vh ;
+}
+.navbar-ctn a:hover{
+  text-decoration: underline;
+}
+
+.navbar-ctn.visible{
+  display: inline-flex;
+}
+
+/*-------------footer------------*/
+
+.footerbox{
+  position:absolute;
+  grid-template-columns: auto auto auto; /*brug af grid template, istedet for section, da det gav mere mulighed at at rykke på det efter behov*/
+  display: grid; /*nødvendig for at indholdet vises*/
+  column-gap: 49vh; /* for at lave mellemrum mellem collums*/
+  justify-content: center;
+  align-items: start;
+  background-color: #326b85;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.dates ul{
+  list-style-type: none; 
+}
+
+.dates li{
+  text-decoration: none;
+  word-spacing: 50px; /*word spacing så der naturligt er mellumrum mellem indholdet, istedet for at bruge . eller _ */
+  
+}
+
+.contact #insta{
+padding-right: 10px;
+}
+/*----------responsiv---------*/
+@media screen and (max-width: 768px){
+
+/*-----------responsiv header-------------*/
+    .main-header{
+      height: 24vh;
+      width: 46vh;
+    }
+
+    #logo{
+      display: flex;
+        width: auto;
+        height: 4vh;
+        position: relative;
+        top: 0vh;
+        padding-right: 0vh;
+        right: 10vh;
+        margin-left: 20px;
+    }
+
+    .navbar{
+      float: left;
+        position: absolute;
+        display: flex;
+        top: 3vh;
+        height: 4vh !important; /*brug af important da den holdte ved i alt det andet kode, så derfor måtte overide de andre regler, og tvinge den ned til den rigtige størrelse*/
+        left: 10px;
+        right: 1px;
+        width: 0vh; /*i responsiv, var den alt for lang, så derfor er der width 0, for at fastholde den nye form*/
+    }
+    .top-nav{
+      left: 1px;
+      right: 1px;
+      padding: 1vh 3vh 2vh 16vh;
+      width: auto;
+    }
+    .navbar-ctn.visible{
+      display: flex;
+      left: 10vh;
+      margin: 3vh 3vh;
+      padding-inline: 0vh;
+    }
+    .top-nav li{
+      padding: 0 0px;
+    }
+
+    /*----------responsiv footer----------*/
+    .footerbox{
+      column-gap: 10px;
+
+    }
+    .footerbox img{
+      width: auto;
+      height: 32px;
+      margin-top: 10px;
+    }
+  }
